@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aike Kawi | Homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Kanit', sans-serif;
+      background: url('3.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    h1, p {
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    #icon {
+      width: 1.5in;
+      height: 1.5in;
+      border-radius: 50%;
+      border: 3px solid green;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    #icon:hover {
+      transform: scale(1.1);
+    }
+
+    #navTab {
+      display: none;
+      margin-top: 2rem;
+      gap: 1rem;
+      flex-direction: column;
+    }
+
+    .link-btn {
+      text-decoration: none;
+      color: black;
+      border: 2px solid white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px;
+      background: rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .link-btn:hover {
+      background: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Website</h1>
+  <p>This is Aike Kawi — explore more about me, my hobbies, and how to get in touch.</p>
+  
+  <img id="icon" src="3.jpg" alt="Icon" onclick="toggleNav()" />
+
+  <div id="navTab" style="display:none; flex;">
+    <a class="link-btn" href="about.html">About Me</a>
+    <a class="link-btn" href="blog.html">My Hobbies</a>
+    <a class="link-btn" href="contact.html">Contact</a>
+  </div>
+
+  <script>
+    function toggleNav() {
+      const tab = document.getElementById('navTab');
+      tab.style.display = tab.style.display === 'none' ? 'flex' : 'none';
+    }
+  </script>
+</body>
+</html>
+
